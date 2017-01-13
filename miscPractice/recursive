@@ -1,0 +1,16 @@
+public class MyClass {
+    
+    public static void printVertical(String str) {
+        
+        if (str == null || str.equals("")) {
+            return;
+        }
+    char c = str.charAt(0);
+    if(c=='o'||c=='e'||c=='a'||c=='i'||c=='u')
+        System.out.println(c); // first char
+    printVertical(str.substring(1)); // rest of string
+}
+    public static void main(String args[]) {
+        printVertical("ho jayega tera, tera umber ab aayega");
+    }
+}
