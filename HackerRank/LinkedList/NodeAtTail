@@ -1,0 +1,27 @@
+Node Insert(Node head,int data) {
+// This is a "method-only" submission. 
+// You only need to complete this method. 
+    
+    if(head == null)
+        {
+        head = new Node();
+        head.data = data;
+        return head;
+    }
+    else
+    {
+       
+       Node node = head;
+       while(node.next!=null)
+           {
+           node = node.next;
+       }
+                node.next = new Node();
+
+        node.next.data = data;
+
+         return head;
+ 
+    }
+      
+}
