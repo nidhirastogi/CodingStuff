@@ -1,0 +1,38 @@
+/*
+  Delete Node at a given position in a linked list 
+  head pointer input could be NULL as well for empty list
+  Node is defined as 
+  class Node {
+     int data;
+     Node next;
+  }
+*/
+    // This is a "method-only" submission. 
+    // You only need to complete this method. 
+
+Node Delete(Node head, int position) {
+    
+    // head == null
+    //head.next = null;
+    //other cases
+    Node node = head;
+   // System.out.println("position: "+ position);
+
+    if(head == null) return null;
+    if(head.next == null && position>0) return null;
+    if(head.next!=null && position == 0) return head.next;
+    int currPos = 0;
+       // System.out.println("currPos: "+currPos);
+
+    while(++currPos<position){
+        if(currPos != position)
+        {
+        
+      //  System.out.println(currPos+", "+node.data);
+        node = node.next;
+        }    
+    }
+        node.next = node.next.next;
+
+    return head;
+}
